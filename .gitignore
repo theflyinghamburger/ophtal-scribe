@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+out/
+build/
+release/
+*.tsbuildinfo
+
+# Test and tooling caches
+coverage/
+.vite/
+.turbo/
+.eslintcache
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+
+# Packaged native binaries and models — tracked only by their manifests
+resources/bin/**
+!resources/bin/binaries.manifest.json
+resources/models/**
+!resources/models/models.manifest.json
+
+# Ephemeral session directories (audio, transcripts, worksheet state, PDFs)
+session-*/
+**/session-*/
+
+# Local environment and editor state
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.swp
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
