@@ -11,11 +11,13 @@ Issues and specs for this repo live as GitHub issues. Use the `gh` CLI for all o
 - **Apply / remove labels**: `gh issue edit <number> --add-label "..."` / `--remove-label "..."`
 - **Close**: `gh issue close <number> --comment "..."`
 
-Infer the repo from `git remote -v`; `gh` does this automatically when run inside a clone.
+Infer the repo from `git remote -v`; `gh` does this automatically when run inside a clone. The remote is
+`theflyinghamburger/ophtal-scribe`.
 
-> **Setup note:** at the time this file was written, this directory was not yet a git repository and had
-> no GitHub remote. Every `gh` command below needs `git init` plus a GitHub remote (or an explicit
-> `--repo <owner>/<name>` flag) before it will resolve. Delete this note once the remote exists.
+Every task in `docs/mvp-implementation-task-specification.md` has an issue, titled `<task id> — <task title>`
+(for example `P1-T04 — Ephemeral session workspace and atomic artifact store`). Each carries a `phase:<n>` label,
+a `class:S|M|C` label, a `Phase <n>` milestone, and native issue dependencies mirroring the spec's `Depends on`
+list, so `issue_dependencies_summary.blocked_by` is the live gate on whether a task can be started.
 
 ## Pull requests as a triage surface
 
